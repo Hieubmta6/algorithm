@@ -1,0 +1,22 @@
+// giá trị của mảng có thể sắp xếp theo vị trí bất kì
+let array = [1, 2, 3, 4, 5];
+let sumMini = 0;
+let sumMax = 0;
+// Sắp xếp mảng số theo thứ tự tăng dần
+const a = array.sort(function(a, b) {
+    return a - b;
+});
+for(i =0;i<a.length; i++)
+    {
+        // Loại bỏ giá trị đầu của mảng để lấy kết quả Max
+        if(i !==0){
+            sumMax +=array[i]
+        }
+         // Loại bỏ giá trị cuối cùng của mảng để lấy kết quả Min
+        if(i !== a.length-1)
+        {
+            sumMini +=array[i]
+        }
+    }
+const result = sumMini +' '+ sumMax
+console.log(result);
